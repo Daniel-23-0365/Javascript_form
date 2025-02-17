@@ -37,8 +37,20 @@
 			const row3 = studentTable.insertRow();
 			const row3co11 = row3.insertCell();
 			row3co11.colSpan="2";
-			row3co11.innerHTML ="TEST";
 			
+			const inputSubmit = document.createElement("input");
+			inputSubmit.type="submit";
+			inputSubmit.value="Create Record";
+			
+			row3co11.append(inputSubmit);	
+
+			const studentForm = document.createElement("form");
+			studentForm.append(studentTable);
+			studentForm.action="create.php";
+			studentForm.method="POST";
+			
+			body = document.getElementsByTagName("body") [0];
+			body.append(studentForm);	
 		</script>
 	</body>
 </html>

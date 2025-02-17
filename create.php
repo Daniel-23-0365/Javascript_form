@@ -24,6 +24,11 @@ echo "Connected successfully";
 $sql = "INSERT INTO students (id, last_name, first_name) VALUES ('', '$lastname', '$firstname')";
  
  if ($conn->query($sql) === TRUE) {
+	 
+	 echo "<br>";
+	 echo "<br>";
+	 echo "<br>";
+
 	 echo "New record created successfully";
  }else {
   echo "Error: " . $sql . "<br>" . $conn->error;
